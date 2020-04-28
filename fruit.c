@@ -21,9 +21,9 @@ int updateFruit(fruit *s){
         return 1;
 }
 
-void readFruit(fruit s){
-	if(s.price == -1) return;
-	printf("%s   %6d %4d \n",s.name,s.price,s.weight);
+void readFruit(fruit *s){
+	if(s->price == -1) return;
+	printf("%s   %6d %4d \n",s->name,s->price,s->weight);
 	return;
 }
 
@@ -50,3 +50,23 @@ int selectMenu(){
 	return menu;
 }
 
+void listFruit(fruit *s,int count){
+
+	printf("\nNo.Name	Price Weight\n");
+	printf("===================\n");
+	for(int i=0; i<count; i++){
+		if( s[i].price == -1)continue;
+		printf("%2d.",i+1);
+		readFruit(&s[i]);
+	}
+	printf("\n");
+}
+
+int selectDataNo(fruit *s, int count){
+    int no;
+    listFruit(s,count);
+    printf("번호는 (취소:0)?");
+    scanf("%d",&no);
+    getchar();
+    return no;
+}

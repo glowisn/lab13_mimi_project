@@ -4,10 +4,13 @@ typedef struct{
 	char name[20];
 	int price;
 	int weight;
-}Fruit;
+}fruit;
 
-int createFruit(Fruit *s);
-int updateFruit(Fruit *s); 
-void readFruit(Fruit s); 
-int deleteFruit(Fruit *s);
+int createFruit(fruit *s);
+int updateFruit(fruit *s); 
+void readFruit(fruit *s); 
+int deleteFruit(fruit *s);
 int selectMenu(); 
+void listFruit(fruit *s,int count);
+int selectDataNo(fruit *s,int count);
+

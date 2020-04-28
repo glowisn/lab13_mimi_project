@@ -1,13 +1,14 @@
+#include <stdio.h>
+#include <string.h>
 #include "fruit.h"
 
 int main(void){
-	Fruit slist[100];
+	fruit slist[100];
 	int curcount = 0;
 
-	//Fruit s;
 	int count = 0 , menu;
 
-	count = loadData(slist);
+	//count = loadData(slist);
 	curcount = count;	
 
 	while(1){
@@ -27,7 +28,7 @@ int main(void){
 				printf("취소됨!\n");
 				continue;
 			}
-		 updateProduct(&slist[no-1]);
+		 updateFruit(&slist[no-1]);
 		}
 		else if (menu == 4) {
 			int no = selectDataNo(slist, curcount);
@@ -35,20 +36,20 @@ int main(void){
 				printf("취소됨!");
 				continue;
 			}
-		deleteProduct(&slist[no-1]);
+		deleteFruit(&slist[no-1]);
 		count--;
 		}else if(menu == 5){
 			if(count == 0)
 				printf("데이터가 없습니다!\n");
 			else
-				saveData(slist, curcount);
+				//saveData(slist, curcount);
 				printf("저장성공!\n");
 		}else if(menu == 6){
-				searchName(slist,curcount);
+				//searchName(slist,curcount);
 		}else if(menu ==7){
-				searchPrice(slist,curcount);
+				//searchPrice(slist,curcount);
 		}else if(menu == 8){
-				analysisFruit(slist,curcount);
+				//analysisFruit(slist,curcount);
 		}
 	}
 
