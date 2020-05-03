@@ -13,3 +13,25 @@ void saveData(fruit *f, int count){
 
 	printf("저장됨!");
 }
+
+int loadData(fruit f[]){
+	int count = 0;
+	FILE *fp;
+
+	fp = fopen("fruit.txt", "rt");
+	if(fp == NULL){
+		printf("=> 파일 없음\n");
+		return 0;
+	}
+
+	for(; ; count++){
+		fscanf(fp, "%d", &f[count].price);
+		fscanf(fp, "%d", &f[count].weight);
+		fscanf(fp, "%[^\n]", f[count].name);
+
+		if(feof(fp)) break;
+	}
+
+	fclose(fp);
+	printf("=> 로딩 성공!\n");
+}
