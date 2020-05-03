@@ -8,7 +8,7 @@ int main(void){
 
 	int count = 0 , menu;
 
-	//count = loadData(slist);
+	count = loadData(slist);
 	curcount = count;	
 
 	while(1){
@@ -42,8 +42,7 @@ int main(void){
 			if(count == 0)
 				printf("데이터가 없습니다!\n");
 			else
-				//saveData(slist, curcount);
-				printf("저장성공!\n");
+				saveData(slist, curcount);
 		}else if(menu == 6){
 				//searchName(slist,curcount);
 		}else if(menu ==7){
