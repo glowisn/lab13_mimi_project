@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <string.h>
-#include "fruit.h"
+#include <stdlib.h>
+#include "manage.h"
 
 int main(void){
 	fruit slist[100];
@@ -8,7 +8,7 @@ int main(void){
 
 	int count = 0 , menu;
 
-	//count = loadData(slist);
+	count = loadData(slist);
 	curcount = count;	
 
 	while(1){
@@ -42,14 +42,14 @@ int main(void){
 			if(count == 0)
 				printf("데이터가 없습니다!\n");
 			else
-				//saveData(slist, curcount);
+				saveData(slist, curcount);
 				printf("저장성공!\n");
 		}else if(menu == 6){
 				//searchName(slist,curcount);
 		}else if(menu ==7){
 				//searchPrice(slist,curcount);
 		}else if(menu == 8){
-				//analysisFruit(slist,curcount);
+				analysisFruit(slist,curcount);
 		}
 	}
 

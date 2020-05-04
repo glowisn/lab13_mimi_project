@@ -43,7 +43,7 @@ int selectMenu(){
 	printf("5.저장\n");
 	printf("6.이름검색\n");
 	printf("7.가격검색\n");
-	printf("9.물품분석\n");
+	printf("8.물품분석\n");
         printf("0.종료\n");
         printf("원하는 메뉴는?:");
 	scanf(" %d",&menu);

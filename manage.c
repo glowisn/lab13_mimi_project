@@ -35,3 +35,17 @@ int loadData(fruit f[]){
 	fclose(fp);
 	printf("=> 로딩 성공!\n");
 }
+
+int analysisFruit(fruit *f,int count){
+    int sum=0, avg=0;
+
+    for(int i=0;i<count;i++){
+        sum += f[i].price;
+    }
+
+    avg = sum / count;
+
+    printf("전체 과일의 가격 총 합은 %6d원 입니다.\n전체 과일의 평균 가격은 %6d원 입니다.",sum,avg);
+}
+
+
