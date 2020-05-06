@@ -11,3 +11,4 @@ $(TAGET) : $(OBJECTS)
 
 $(DTARGET) : $(OBJECTS)
 	$(CC) -DDEBUG -o $@ $^
+
