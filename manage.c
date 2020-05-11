@@ -69,3 +69,30 @@ void searchName(fruit *f, int count){
 	}
 	if(scount == 0) printf("=> 검색된 데이터 없음!\n");
 }
+
+void searchMax(fruit *f, int count){
+	int max = 0;
+
+	for(int i = 0; i < count; i++){
+		if(f[i].price != -1){
+			if(max < f[i].price)
+				max = f[i].price;
+		}
+	}
+
+	printf("\nNo.Name       Price Weight\n");
+        printf("==============================\n");
+
+	for(int i = 0; i < count; i++){
+		if(f[i].price != -1){
+			if(f[i].price == max){
+				printf("%2d", i+1);
+				readFruit(f[i]);
+			}
+		}
+	}
+}
+
+void searchMin(fruit *f, int count){
+
+}
