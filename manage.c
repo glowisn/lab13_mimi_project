@@ -48,4 +48,24 @@ int analysisFruit(fruit *f,int count){
     printf("전체 과일의 가격 총 합은 %6d원 입니다.\n전체 과일의 평균 가격은 %6d원 입니다.",sum,avg);
 }
 
+void searchName(fruit *f, int count){
+	int scount = 0;
+	char search[50];
 
+	printf("검색할 이름: ");
+	scanf("%[^\n]", search);
+
+	printf("\nNo.Name       Price Weight\n");
+	printf("==============================\n");
+
+	for(int i = 0; i < count; i++){
+		if(f[i].price != -1){
+			if(strstr(f[i].name. search)){
+				printf("%2d ", i+1);
+				readFruit(f[i]);
+				scount++;
+			}
+		}
+	}
+	if(scount == 0) printf("=> 검색된 데이터 없음!\n");
+}
