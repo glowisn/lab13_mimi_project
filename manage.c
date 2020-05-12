@@ -94,5 +94,28 @@ void searchMax(fruit *f, int count){
 }
 
 void searchMin(fruit *f, int count){
+	int min = 0;
 
+	if(f[i].price != -1)
+		min = f[0].price;
+
+	for(int i = 1; i < count; i++){
+		if(f[i].price != -1){
+			if(min > f[i].price)
+				min = f[i].price;
+		}
+	}
+
+	printf("\nNo.Name       Price Weight\n");
+	printf("==============================\n");
+
+	for(int i = 0; i < count; i++){
+		if(f[i].price != -1){
+			if(f[i].price == min){
+				printf("%2d", i+1);
+				readFruit(f[i]);
+			}
+		}
+	}
 }
+
