@@ -45,10 +45,12 @@ int main(void){
 				saveData(slist, curcount);
 				printf("저장성공!\n");
 		}else if(menu == 6){
-				//searchName(slist,curcount);
-		}else if(menu ==7){
-				//searchPrice(slist,curcount);
-		}else if(menu == 8){
+			searchName(slist,curcount);
+		}else if(menu == 7){
+			//
+		} else if(menu == 8){
+			//
+		} else if(menu == 9){
 				analysisFruit(slist,curcount);
 		}
 	}
