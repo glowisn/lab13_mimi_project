@@ -47,7 +47,7 @@ int analysisFruit(fruit *f,int count){
 
     avg = sum / count;
 
-    printf("전체 과일의 가격 총 합은 %6d원 입니다.\n전체 과일의 평균 가격은 %6d원 입니다.",sum,avg);
+    printf("전체 과일의 가격 총 합은 %6d원 입니다.\n전체 과일의 평균 가격은 %6d원 입니다.\n",sum,avg);
 }
 
 void searchName(fruit *f, int count){
