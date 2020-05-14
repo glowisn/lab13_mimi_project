@@ -48,6 +48,7 @@ int selectMenu(){
         printf("0.종료\n");
         printf("원하는 메뉴는?:");
 	scanf(" %d",&menu);
+	getchar();
 	return menu;
 }
 

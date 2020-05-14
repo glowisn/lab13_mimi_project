@@ -34,6 +34,8 @@ int loadData(fruit f[]){
 
 	fclose(fp);
 	printf("=> 로딩 성공!\n");
+
+	return count;
 }
 
 int analysisFruit(fruit *f,int count){
@@ -60,9 +62,9 @@ void searchName(fruit *f, int count){
 
 	for(int i = 0; i < count; i++){
 		if(f[i].price != -1){
-			if(strstr(f[i].name. search)){
+			if(strstr(f[i].name, search)){
 				printf("%2d ", i+1);
-				readFruit(f[i]);
+				readFruit(&f[i]);
 				scount++;
 			}
 		}
@@ -87,7 +89,7 @@ void searchMax(fruit *f, int count){
 		if(f[i].price != -1){
 			if(f[i].price == max){
 				printf("%2d", i+1);
-				readFruit(f[i]);
+				readFruit(&f[i]);
 			}
 		}
 	}
@@ -95,8 +97,8 @@ void searchMax(fruit *f, int count){
 
 void searchMin(fruit *f, int count){
 	int min = 0;
-
-	if(f[i].price != -1)
+	
+	if(f[0].price != -1)
 		min = f[0].price;
 
 	for(int i = 1; i < count; i++){
@@ -113,7 +115,7 @@ void searchMin(fruit *f, int count){
 		if(f[i].price != -1){
 			if(f[i].price == min){
 				printf("%2d", i+1);
-				readFruit(f[i]);
+				readFruit(&f[i]);
 			}
 		}
 	}

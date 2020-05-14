@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "manage.h"
 
 int main(void){
@@ -43,13 +41,12 @@ int main(void){
 				printf("데이터가 없습니다!\n");
 			else
 				saveData(slist, curcount);
-				printf("저장성공!\n");
 		}else if(menu == 6){
-			searchName(slist,curcount);
+			searchName(slist, count);
 		}else if(menu == 7){
-			//
+			searchMax(slist, count);
 		} else if(menu == 8){
-			//
+			searchMin(slist, count);
 		} else if(menu == 9){
 				analysisFruit(slist,curcount);
 		}
